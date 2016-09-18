@@ -26,7 +26,6 @@ body {
     font-family: sans-serif;
     padding-left: 20px;
     padding-right: 20px;
-<<<<<<< HEAD
 }
 
 canvas {
@@ -35,6 +34,3 @@ canvas {
     position:absolute;
     z-index:-1;
 }
-=======
-}
->>>>>>> 4935114a44a30d399980789742fd97b44a2a37fd
