@@ -2,7 +2,7 @@
 var button = document.getElementById("counter");
 var counter = 0;
 console.log("loaded");
-button.onClick = function() {
+button.onclick = function() {
     console.log("sd");
     
     counter++;
