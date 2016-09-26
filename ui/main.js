@@ -1,13 +1,11 @@
-console.log('Loaded!');
+//Counter button code
+var button = document.getElementById("button");
+var counter = 0;
 
-//Move the image
-var img = document.getElementById("madi");
-var marginLeft = 0;
-function moveRight() {
-    marginLeft += 1;
-    img.style.marginLeft = marginLeft + "px";
-}
-
-img.onclick = function() {
-    var interval = setInterval(moveRight, 50);
-}
+button.onClick = function() {
+    
+    
+    counter++;
+    var span = document.getElementById("count");
+    span.innerHTML = counter.toString();
+};
