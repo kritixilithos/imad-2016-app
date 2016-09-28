@@ -2,25 +2,25 @@
 var button = document.getElementById("counter");
 
 
-button.onclick = function() {
+button.onclick = function () {
+
+    // Create a request object
+    var request = new XMLHttpRequest();
     
-    //create request object
-    var request = XMLHttpRequest();
-    
-    //Capture request and store in var
-    request.onreadystatechange = function() {
-        if(request.readyState === XMLHttpRequest.DONE) {
-            //Take some action
-            if(request.status === 200) {
-                var counter = request.responsetext;
-                var span = document.getElementById("count");
-                span.innerHTML = counter.toString();
-            }
-        }
-        //Not done yet
+    // Capture the response and store it in a variable
+    request.onreadystatechange = function () {
+      if (request.readyState === XMLHttpRequest.DONE) {
+          // Take some action
+          if (request.status === 200) {
+              var counter = request.responseText;
+              var span = document.getElementById('count');
+              span.innerHTML = counter.toString();          
+          }
+      }  
+      // Not done yet
     };
     
-    //make the request
+    // Make the request
     request.open('GET', 'http://kritixilithos.imad.hasura-app.io/counter', true);
     request.send(null);
 };
