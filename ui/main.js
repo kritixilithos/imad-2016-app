@@ -24,3 +24,22 @@ button.onclick = function () {
     request.open('GET', 'http://kritixilithos.imad.hasura-app.io/counter', true);
     request.send(null);
 };
+
+//Submti name
+var nameInput = document.getElementById("name");
+var name = nameInput.value;
+var submit = document.getElementById("submit_btn");
+submit.onclick = function() {
+    //Make request to server and send name
+    
+    //Capture list of names and render as list
+    
+    var names = ["name1", "name2", "name3"];
+    var list = "";
+    for(var i = 0; i < names.length; i++) {
+        list += '<li>' + names[i] + '</li>';
+    }
+    
+    var ul = document.getElementById("namelist");
+    ul.innerHTML = list;
+};
